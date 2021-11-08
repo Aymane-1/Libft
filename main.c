@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 16:46:37 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/07 14:17:42 by aechafii         ###   ########.fr       */
+/*   Created: 2021/11/07 14:19:06 by aechafii          #+#    #+#             */
+/*   Updated: 2021/11/07 14:40:34 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(const char *str)
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+int main()
 {
-	int count;
-	count = 0;
-
-	while(str[count])
-	{
-		count++;
-	}
-	return count;
+	char dest [11] = "Wsup";
+	char src [] = "bitches";
+	printf("The re-coded one : %zu\n", ft_strlcat(dest, src, 11));
+	printf("Dest : %s\n", dest);
+	printf("---------------\n");
+	char dest1 [11] = "Wsup";
+	char src1 [] = "bitches";
+	printf("The original one : %zu\n", strlcat(dest1, src1, 11));
+	printf("Dest : %s", dest1);
 }
+
