@@ -6,7 +6,7 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 13:22:33 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/10 21:20:33 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/11 02:46:25 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -54,7 +54,7 @@ char *ft_strtrim(char const *s1, char const *set)
 		end --;
 	length = (end - start) + 1;
 	if (start > end)
-		length = 1;
+		length = 0;
 	ptr = (char *)malloc(length * sizeof(char));
 	if(!ptr)
 		return(ptr);
@@ -66,7 +66,7 @@ char *ft_strtrim(char const *s1, char const *set)
 
 int main()
 {
-	const char s1 [] = "jdhfd";
-	const char set [] = "./#";
+	const char s1 [] = "..0000..";
+	const char set [] = "0.";
 	printf("%s\n", ft_strtrim(s1, set));
 }
