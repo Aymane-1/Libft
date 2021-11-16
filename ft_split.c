@@ -6,7 +6,7 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 21:21:02 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/14 19:09:52 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/16 21:12:05 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,15 @@ static char **ft_is_strings_printing(char **p_str, char *str, char c, int length
 	i++;
 	}
 	p_str[i] = 0;
-	return((char **)p_str);
+	return(p_str);
 }
 
 char **ft_split(char const *s, char c)
 {
 	int i;
 	int	j;
-	int len;
 	int count;
+	int len;
 	char **s_ptr;
 
 	i = 0;
@@ -69,21 +69,23 @@ char **ft_split(char const *s, char c)
 	j = 0;
 	while(i < len)
 	{
+		count = j;
 		while(s[j] && s[j] == c)
 			j++;
 			while(s[j] && s[j] != c)
 			j++;
-
-			
+			s_ptr[i] = (char *)malloc(count + 1 * sizeof(char *));
+	i++;
 	}
+	return(ft_is_strings_printing(s_ptr, (char *)s, c, len));
 }
 
 #include <stdio.h>
 int main()
 {
 	int i = 0;
-	char s [] = "Hello developers community";
-	char c = ' ';
+	char s [] = "                  Hello             developers                   c           ommun     ity    ";
+	char c;
 	int	l = ft_is_num_of_words(s, c);
 	char **tab = ft_split(s, c);
 	while (i < l)
