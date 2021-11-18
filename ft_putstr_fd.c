@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 20:43:34 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/17 18:19:23 by aechafii         ###   ########.fr       */
+/*   Created: 2021/11/17 21:27:22 by aechafii          #+#    #+#             */
+/*   Updated: 2021/11/18 00:32:25 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-void f(unsigned i, char *s)
-{
-	i = 0;
-	while(s[i])
-	{
-		s[i] = '1';
-		i++;
-	}
-}
-
-void ft_striteri(char *s, void (*f)(unsigned int i, char *str))
+#include<unistd.h>
+#include<fcntl.h>
+void ft_putstr_fd(char *s, int fd)
 {
 	int i;
-	char *str;
 
 	i = 0;
 	while(s[i])
 	{
-		f(i, s);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }
-
 int main()
 {
-	char s [] = "Meeeh";
-	ft_striteri(s, f);
-	printf("%s", s);
+	int fd;
+
+	fd = open("test", O_CREAT | O_RDWR);
+	ft_putstr_fd("Hello world", fd);
 }

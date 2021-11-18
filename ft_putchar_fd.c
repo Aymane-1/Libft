@@ -1,41 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 20:43:34 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/17 18:19:23 by aechafii         ###   ########.fr       */
+/*   Created: 2021/11/17 18:18:33 by aechafii          #+#    #+#             */
+/*   Updated: 2021/11/17 22:32:29 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-void f(unsigned i, char *s)
+#include<stdio.h>
+#include<fcntl.h>
+void ft_putchar_fd(char c, int fd)
 {
-	i = 0;
-	while(s[i])
-	{
-		s[i] = '1';
-		i++;
-	}
+	write(fd, &c, 1);
 }
-
-void ft_striteri(char *s, void (*f)(unsigned int i, char *str))
-{
-	int i;
-	char *str;
-
-	i = 0;
-	while(s[i])
-	{
-		f(i, s);
-		i++;
-	}
-}
-
 int main()
 {
-	char s [] = "Meeeh";
-	ft_striteri(s, f);
-	printf("%s", s);
+	int fd;
+
+	fd = open("42", O_WRONLY | O_CREAT);
+	ft_putchar_fd('Z', fd);
 }

@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 20:43:34 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/17 18:19:23 by aechafii         ###   ########.fr       */
+/*   Created: 2021/11/18 00:32:52 by aechafii          #+#    #+#             */
+/*   Updated: 2021/11/18 02:27:18 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-void f(unsigned i, char *s)
-{
-	i = 0;
-	while(s[i])
-	{
-		s[i] = '1';
-		i++;
-	}
-}
-
-void ft_striteri(char *s, void (*f)(unsigned int i, char *str))
+#include<fcntl.h>
+#include<unistd.h>
+void ft_putendl_fd(char *s, int fd)
 {
 	int i;
-	char *str;
 
 	i = 0;
 	while(s[i])
 	{
-		f(i, s);
+		write(fd, &s[i], 1);
 		i++;
 	}
+	write(fd, "\n", 1);
 }
-
 int main()
 {
-	char s [] = "Meeeh";
-	ft_striteri(s, f);
-	printf("%s", s);
+	int fd;
+	char s[] = "hello world";
+
+	fd = open("test", O_CREAT | O_RDWR);
+	ft_putendl_fd(s, fd);
 }
+
