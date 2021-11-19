@@ -9,9 +9,10 @@
 /*   Updated: 2021/11/04 11:04:35 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 void ft_bzero(void *str, size_t n)
 {
-	int i;
+	size_t i;
 	i = 0;
 	while(((char *)str)[i] && i < n)
 	{

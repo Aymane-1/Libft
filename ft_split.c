@@ -9,8 +9,7 @@
 /*   Updated: 2021/11/16 21:12:05 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <libc.h>
+#include "libft.h"
 static int ft_is_num_of_words(const char *str, char c)
 {
 	int i;
@@ -78,19 +77,4 @@ char **ft_split(char const *s, char c)
 	i++;
 	}
 	return(ft_is_strings_printing(s_ptr, (char *)s, c, len));
-}
-
-#include <stdio.h>
-int main()
-{
-	int i = 0;
-	char s [] = "                  Hello             developers                   c           ommun     ity    ";
-	char c;
-	int	l = ft_is_num_of_words(s, c);
-	char **tab = ft_split(s, c);
-	while (i < l)
-	{
-		puts(tab[i]);
-		i++;
-	}
 }

@@ -9,13 +9,13 @@
 /*   Updated: 2021/11/08 15:34:45 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 void *ft_calloc(size_t n, size_t size)
 {
 	char	*p;
 	size_t	i;
 
+	i = 0;
 	p = (char *)malloc(n * size);
 	if(!p)
 		return(p);
@@ -26,8 +26,4 @@ void *ft_calloc(size_t n, size_t size)
 	}
 	return(p);
 }
-int main()
-{
-	printf("%s\n", ft_calloc(10, 1));
-   //printf("%s\n", calloc(10, 1));
- }
+

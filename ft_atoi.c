@@ -9,8 +9,7 @@
 /*   Updated: 2021/11/07 13:59:58 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 int	ft_isspace(char c)
 {
 	if (c == ' ' || c == '\t' || c == '\n'
@@ -43,13 +42,4 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	return (res * s);
-}
-
-int main()
-{
-	char str [] = "-+12345";
-	printf("%d\n", ft_atoi(str));
-
-	char str1 [] = "-+12345";
-	printf("%d", atoi(str1));
 }

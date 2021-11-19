@@ -6,12 +6,10 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:59:49 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/05 18:48:26 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/19 17:56:50 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
-
+#include "libft.h"
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t i;
@@ -32,13 +30,4 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (0);
 }
 
-int main()
-{
-	char s1 [] = "Hello people hello";
-	char s2 [] = "ple";
-	printf("%s\n", ft_strnstr(s1, s2, 20));
 
-	char s3 [] = "Hello people hello";
-	char s4 [] = "ple";
-	printf("%s", strnstr(s3, s4, 20));
-}

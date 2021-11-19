@@ -9,8 +9,7 @@
 /*   Updated: 2021/11/18 02:27:18 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<fcntl.h>
-#include<unistd.h>
+#include "libft.h"
 void ft_putendl_fd(char *s, int fd)
 {
 	int i;
@@ -22,13 +21,5 @@ void ft_putendl_fd(char *s, int fd)
 		i++;
 	}
 	write(fd, "\n", 1);
-}
-int main()
-{
-	int fd;
-	char s[] = "hello world";
-
-	fd = open("test", O_CREAT | O_RDWR);
-	ft_putendl_fd(s, fd);
 }
 

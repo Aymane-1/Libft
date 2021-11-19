@@ -9,9 +9,10 @@
 /*   Updated: 2021/11/04 18:46:50 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int i;
+	size_t i;
 	i = 0;
 	while(i < n)
 	{

@@ -6,23 +6,10 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 10:13:27 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/09 13:21:09 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/19 17:57:36 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
-int ft_strlen(const char *str)
-{
-	int count;
-	count = 0;
-
-	while(str[count])
-	{
-		count++;
-	}
-	return count;
-}
-
+#include "libft.h"
 char *ft_strjoin(char const *s1, char const *s2)
 {
 	size_t i;
@@ -50,9 +37,3 @@ char *ft_strjoin(char const *s1, char const *s2)
 	return (ptr);
 }
 
-int main ()
-{
-	char str1 [] = "Hello ";
-	char str2 [] = "world";
-	printf("%s", ft_strjoin(str1, str2));
-}

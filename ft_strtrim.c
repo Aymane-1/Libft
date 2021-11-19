@@ -6,23 +6,10 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 13:22:33 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/11 02:46:25 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/19 18:31:36 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <libc.h> 
-int ft_strlen(const char *str)
-{
-	int count;
-
-	count = 0;
-	while(str[count])
-	{
-		count++;
-	}
-	return count;
-}
-
+#include "libft.h"
 int ft_is_within_s1(const char *str, char ch)
 {
 	size_t i;
@@ -55,18 +42,11 @@ char *ft_strtrim(char const *s1, char const *set)
 	length = (end - start) + 1;
 	if (start > end)
 		length = 0;
-	ptr = (char *)malloc(length * sizeof(char));
+	ptr = (char *)malloc((length + 1) * sizeof(char));
 	if(!ptr)
 		return(ptr);
 	while(start <= end)
 		ptr[i++] = s1[start++];
 	ptr[i] = '\0';
 	return(ptr);
-}
-
-int main()
-{
-	const char s1 [] = "..0000..";
-	const char set [] = "0.";
-	printf("%s\n", ft_strtrim(s1, set));
 }

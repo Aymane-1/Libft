@@ -6,14 +6,15 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:54:44 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/03 17:43:02 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/19 18:26:10 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 void *ft_memset(void *str, int c, size_t len)
 {
-	int i;
-	i = 0;
+	size_t i;
 	
+	i = 0;
 	while(((char *)str)[i] && i < len) 
 	{
 		((char *)str)[i] = c;
