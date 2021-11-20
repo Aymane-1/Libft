@@ -6,13 +6,13 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 18:11:40 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/02 18:19:22 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/20 12:06:41 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 int ft_tolower(int ch)
 {
-	if (ch >= 60 && ch <= 90)
+	if (ch >= 65 && ch <= 90)
 		ch += 32;
 	return (ch);
 }
