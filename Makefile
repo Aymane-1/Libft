@@ -6,7 +6,7 @@
 #    By: aechafii <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/19 16:24:29 by aechafii          #+#    #+#              #
-#    Updated: 2021/11/20 09:54:15 by aechafii         ###   ########.fr        #
+#    Updated: 2021/11/22 14:43:44 by aechafii         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,9 +29,9 @@ $(NAME): $(OBJ) $(HEADER)
 %.o: %.c
 	$(CC) -I$(HEADER) $(GCC_FLAGS) -c $<
 clean:
-	rm -f *.o
+	rm -f $(OBJ)
 
-fclean:
-	rm -f *.o $(NAME)
+fclean: clean
+	rm -f  $(NAME)
 
 re: fclean all

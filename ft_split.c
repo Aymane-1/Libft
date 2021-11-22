@@ -6,7 +6,7 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 21:21:02 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/16 21:12:05 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:24:05 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -52,6 +52,20 @@ static char **ft_is_strings_printing(char **p_str, char *str, char c, int length
 	return(p_str);
 }
 
+static char **ft_is_free(char **ptr, int n)
+{
+	int i;
+
+	i = 0;
+	while(i < n)
+	{
+		free(ptr[i]);
+		i++;
+	}
+	free(ptr);
+	return(NULL);
+}
+
 char **ft_split(char const *s, char c)
 {
 	int i;
@@ -68,12 +82,14 @@ char **ft_split(char const *s, char c)
 	j = 0;
 	while(i < len)
 	{
-		count = j;
+		count = 0;
 		while(s[j] && s[j] == c)
 			j++;
 			while(s[j] && s[j] != c)
 			j++;
-			s_ptr[i] = (char *)malloc(count + 1 * sizeof(char *));
+			s_ptr[i] = (char *)malloc((count + 1) * sizeof(char));
+			if(!(s_ptr[i]))
+				return (ft_is_free(s_ptr, count));
 	i++;
 	}
 	return(ft_is_strings_printing(s_ptr, (char *)s, c, len));
