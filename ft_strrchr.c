@@ -6,7 +6,7 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 20:45:00 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/20 12:38:37 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/23 21:44:32 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char *ft_strrchr(const char *str, int ch)
 	i = ft_strlen(str); 
 	while(i >= 0)
 	{	
-		if(str[i] == ch)
+		if(str[i] == (unsigned char)ch)
 		return ((char* )(str + i));
 		i--;
 	}

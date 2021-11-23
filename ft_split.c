@@ -6,7 +6,7 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 21:21:02 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/22 18:24:05 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/23 21:57:17 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -74,6 +74,8 @@ char **ft_split(char const *s, char c)
 	int len;
 	char **s_ptr;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	len = ft_is_num_of_words(s, c);
 	s_ptr = (char **)malloc((len + 1) * sizeof(char *));
