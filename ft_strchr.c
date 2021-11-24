@@ -6,18 +6,19 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:18:38 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/23 21:44:10 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/24 11:19:34 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-char *ft_strchr(const char *str, int ch)
+
+char	*ft_strchr(const char *str, int ch)
 {
-	int i;
-	int count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = ft_strlen(str);
-	if(ch == 0)
+	if (ch == 0)
 		return ((char *)str + count);
 	while (i < count && str[i])
 	{

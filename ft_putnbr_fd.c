@@ -6,14 +6,14 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 02:28:09 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/23 18:44:53 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/24 12:21:17 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long nb;
+	long	nb;
 
 	nb = n;
 	if (nb < 0)

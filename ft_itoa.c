@@ -6,13 +6,14 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:15:30 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/23 17:20:19 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/24 12:05:48 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 static int	nb_digits(int n)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	if (n == 0)

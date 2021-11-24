@@ -6,13 +6,14 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:23:22 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/02 18:11:11 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/24 11:17:45 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-int ft_toupper(int ch)
+
+int	ft_toupper(int ch)
 {
-	if ( ch >= 97 && ch  <= 122 )
+	if (ch >= 97 && ch <= 122)
 		ch -= 32;
 	return (ch);
 }

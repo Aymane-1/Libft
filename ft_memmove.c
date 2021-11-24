@@ -6,13 +6,12 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 18:47:41 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/20 13:03:12 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/24 11:12:21 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-void *ft_memmove(void *s1, const void *s2, size_t n)
+void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
 	unsigned char	*d;
 	unsigned char	*s;

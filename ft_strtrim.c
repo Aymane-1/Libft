@@ -6,47 +6,50 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 13:22:33 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/22 17:51:28 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/24 11:43:24 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-int ft_is_within_s1(const char *str, char ch)
+
+static int	ft_is_within_s1(const char *str, char ch)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
-		if(str[i] == ch)
-			return(1);
+		if (str[i] == ch)
+			return (1);
 		i++;
 	}
-	return(0);
+	return (0);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
-	int length;
-	int start;
-	int end;
-	char *ptr;
+	size_t	i;
+	int		length;
+	int		start;
+	int		end;
+	char	*ptr;
 
 	i = 0;
 	start = i;
-	while(s1[start] && ft_is_within_s1(set, s1[start]) == 1)
+	if (!s1)
+		return (NULL);
+	while (s1[start] && ft_is_within_s1(set, s1[start]) == 1)
 		start++;
 	end = ft_strlen(s1) - 1;
-	while(s1[end] && ft_is_within_s1(set, s1[end]) == 1)
+	while (s1[end] && ft_is_within_s1(set, s1[end]) == 1)
 		end --;
 	length = (end - start) + 1;
 	if (start > end)
 		length = 0;
 	ptr = (char *)malloc((length + 1) * sizeof(char));
-	if(!ptr)
-		return(ptr);
-	while(start <= end)
+	if (!ptr)
+		return (ptr);
+	while (start <= end)
 		ptr[i++] = s1[start++];
 	ptr[i] = '\0';
-	return(ptr);
+	return (ptr);
 }

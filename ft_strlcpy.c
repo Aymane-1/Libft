@@ -6,10 +6,11 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:15:00 by aechafii          #+#    #+#             */
-/*   Updated: 2021/11/23 17:20:29 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/11/24 11:13:19 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
